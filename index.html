@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EbMac | Finding Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hazy-gold: #e2b04a;
+            --bruised-purple: #4a3b52;
+            --warm-cream: #fdfaf6;
+        }
+
+        body {
+            background-color: var(--warm-cream);
+            font-family: 'Inter', sans-serif;
+            color: var(--bruised-purple);
+            background-image: radial-gradient(#d1c7b7 0.5px, transparent 0.5px);
+            background-size: 30px 30px;
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+        .typewriter { font-family: 'Special Elite', cursive; }
+
+        .paper-card {
+            background: white;
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.05);
+            position: relative;
+            clip-path: polygon(0% 0%, 100% 1%, 99% 98%, 2% 100%, 0% 95%);
+        }
+
+        .ripped-edge {
+            background: white;
+            padding: 2rem;
+            position: relative;
+            filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.1));
+            clip-path: polygon(0% 2%, 5% 0%, 10% 2%, 15% 0%, 20% 2%, 25% 0%, 30% 2%, 35% 0%, 40% 2%, 45% 0%, 50% 2%, 55% 0%, 60% 2%, 65% 0%, 70% 2%, 75% 0%, 80% 2%, 85% 0%, 90% 2%, 95% 0%, 100% 2%, 100% 98%, 95% 100%, 90% 98%, 85% 100%, 80% 98%, 75% 100%, 70% 98%, 65% 100%, 60% 98%, 55% 100%, 50% 98%, 45% 100%, 40% 98%, 35% 100%, 30% 98%, 25% 100%, 20% 98%, 15% 100%, 10% 98%, 5% 100%, 0% 98%);
+        }
+
+        .tape-effect {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(2px);
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .gold-underline {
+            background: linear-gradient(transparent 70%, var(--hazy-gold) 70%);
+        }
+
+        .polaroid {
+            background: white;
+            padding: 15px 15px 40px 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: rotate(-3deg);
+            transition: transform 0.3s ease;
+        }
+
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <nav class="p-8 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="typewriter text-2xl font-bold border-b-2 border-[--hazy-gold]">EbMac</div>
+        <div class="flex space-x-8 text-xs uppercase tracking-[0.2em] font-bold">
+            <a href="#about" class="hover:text-[--hazy-gold] transition">The Author</a>
+            <a href="#newsletter" class="hover:text-[--hazy-gold] transition">Updates</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-16 items-center">
+        
+        <div class="space-y-8">
+            <div class="space-y-2">
+                <p class="typewriter text-[--hazy-gold] text-sm uppercase font-bold tracking-widest">A Second Chance Romance</p>
+                <h1 class="serif text-6xl md:text-8xl text-[--bruised-purple] leading-tight">Finding <br>Home</h1>
+            </div>
+
+            <div class="ripped-edge max-w-md">
+                <p class="serif italic text-xl text-gray-700 leading-relaxed">
+                    "Because home was never a place. <br class="hidden md:block"> It was always a person."
+                </p>
+            </div>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-md font-light">
+                Set against the hazy gold summers of 1997 Chicago, <span class="gold-underline font-semibold text-[--bruised-purple]">Finding Home</span> follows Simone across twenty years of memory to discover that some people aren't lost—they're just waiting to be found.
+            </p>
+
+            <div id="newsletter" class="pt-4">
+                <h3 class="typewriter text-sm font-bold uppercase mb-4 tracking-widest">Join the Book Club</h3>
+                <div class="flex flex-col sm:flex-row gap-2 max-w-md">
+                    <input type="email" placeholder="Your email address" class="flex-grow bg-white border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[--hazy-gold]">
+                    <button class="bg-[--bruised-purple] text-white px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-black transition">Notify Me</button>
+                </div>
+                <p class="text-[10px] text-gray-400 mt-3 typewriter uppercase">Be the first to know when the 283 pages are live.</p>
+            </div>
+        </div>
+
+        <div class="relative py-12">
+            <!-- Book Placeholder -->
+            <div class="relative z-10 mx-auto w-64 md:w-80 aspect-[2/3] bg-[--bruised-purple] paper-card overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                    <p class="typewriter text-[10px] mb-2 uppercase tracking-widest">A 1997 Chicago Story</p>
+                    <h2 class="serif text-4xl font-bold tracking-tight mb-2">Finding Home</h2>
+                    <p class="text-xs font-light text-white/70 italic">A Novel by EbMac</p>
+                </div>
+            </div>
+
+            <!-- Polaroid of You -->
+            <div class="absolute -bottom-4 -left-4 md:-left-12 z-20 w-40 md:w-56 polaroid">
+                <div class="tape-effect"></div>
+                <div class="aspect-square bg-gray-200 overflow-hidden mb-4">
+                    <!-- Pointing to your uploaded photo IMG_0643 -->
+                    <img src="IMG_0643.jpg" alt="EbMac Author Photo" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1523910088395-d7457f8ee331?auto=format&fit=crop&w=600&q=80'">
+                </div>
+                <p class="typewriter text-[10px] text-center text-gray-500 italic">Author @ebmac2</p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="about" class="max-w-6xl mx-auto px-6 py-24 border-t border-gray-100">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="col-span-2">
+                <h4 class="serif text-2xl mb-6">About the Author</h4>
+                <p class="text-gray-600 leading-relaxed font-light mb-4">
+                    EbMac is a Kenosha-based author exploring the complex layers of love and nostalgia. When she isn't finalizing her 283-page manuscript, you can find her enjoying the soul of the city or spending time with horses.
+                </p>
+            </div>
+            <div class="flex flex-col justify-end space-y-2 text-xs typewriter text-gray-400">
+                <p>Status: Finalizing Manuscript</p>
+                <p>Location: Kenosha, WI</p>
+                <p>&copy; 2024 EBMAC | ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
